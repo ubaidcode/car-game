@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Turbo Rush - 2D Racing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap"><div id="stage">
+<canvas id="c"></canvas>
+<button id="pb" data-a="pause" aria-label="Pause">❚❚</button>
+<div id="tc"><div><button id="bl" aria-label="Left">◀</button><button id="br" aria-label="Right">▶</button></div><button id="bn">NITRO</button></div>
+
+<section class="s on" id="menu"><h1>TURBO<br>RUSH</h1><p>Five levels. One finish line each.</p>
+<button class="b" data-a="play">PLAY</button><button class="b g" data-a="levels">LEVELS</button><button class="b g" data-a="settings">SETTINGS</button>
+<small>Arrows or A/D steer, S brake, Space nitro</small></section>
+
+
+<section class="s" id="lvs"><h2>SELECT LEVEL</h2><div id="grid"></div><button class="b g" data-a="menu">BACK</button></section>
+
+<section class="s" id="set"><h2>SETTINGS</h2><button class="b" id="sb" data-a="snd">SOUND: ON</button>
+<label>Steering sensitivity<input type="range" id="sens" min="0.6" max="1.6" step="0.1" value="1"></label>
+<p class="h">Arrows or A/D steer, Down or S brake, Space or Shift nitro, P or Esc pause. On touch screens use the on-screen buttons.</p>
+<button class="b g" data-a="back">BACK</button></section>
+
+<section class="s" id="pause"><h2>PAUSED</h2><button class="b" data-a="pause">RESUME</button><button class="b g" data-a="restart">RESTART</button><button class="b g" data-a="settings">SETTINGS</button><button class="b g" data-a="levels">LEVELS</button></section>
+
+<section class="s" id="over"><h2>CRASHED</h2><p id="oi"></p><button class="b r" data-a="restart">TRY AGAIN</button><button class="b g" data-a="levels">LEVELS</button><button class="b g" data-a="menu">MAIN MENU</button></section>
+
+<section class="s" id="done"><h2>LEVEL COMPLETE</h2><div id="stars"></div><p id="di"></p><button class="b" data-a="next">NEXT LEVEL</button><button class="b g" data-a="restart">REPLAY</button><button class="b g" data-a="levels">LEVELS</button></section>
+
+<section class="s" id="win"><h2>CHAMPION</h2><div style="font-size:64px">🏆</div><p id="wi"></p><button class="b" data-a="levels">SEE WHATS NEXT</button><button class="b g" data-a="menu">MAIN MENU</button></section>
+</div></div>
+<script src="script.js"></script>
+</body>
+</html>
